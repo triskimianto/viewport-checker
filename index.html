@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="Tito Riskimianto" />
+  <title>Viewport Checker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div class="container bg-gradient-to-r from-blue-300 to-blue-400 max-w-full h-screen">
+    <div class="flex flex-col justify-center items-center h-full">
+      <div class="px-5 md:px-0 my-auto text-center text-white">
+        <h1 class="text-base md:text-2xl font-semibold mb-5">
+          Viewport checker
+        </h1>
+        <h1 class="text-xl md:text-4xl font-medium mb-2">
+          Your viewport is: <span id="viewWidth">Width</span> px &times;
+          <span id="viewHeight">Height</span> px
+        </h1>
+        <h1 class="text-base md:text-2xl font-medium">
+          Your screen resolution is: <span id="srWidth">Width</span> px &times;
+          <span id="srHeight">Height</span> px
+        </h1>
+      </div>
+      <div class="w-full px-2 md:px-5 py-2 md:py-4 text-white">
+        <div class="flex flex-row justify-between items-center">
+          <div class="flex justify-center items-center gap-x-1 text-sm md:text-base font-normal">
+            <h1>Created by</h1>
+            <a href="https://titoriskimianto.my.id/" class="underline">Tito Riskimianto</a>
+          </div>
+          <a href="https://titoriskimianto.my.id/" class="w-6">
+            <img src="https://titoriskimianto.my.id/assets/img/tr-640-640-white.png" alt="tr" />
+          </a>
+          <button id="openAbout" class="text-sm md:text-base font-normal underline">What Is A Viewport?</button>
+        </div>
+      </div>
+      <div id="aboutModal" class="w-full h-screen bg-white absolute z-10 hidden transition ease-in">
+        <div class="flex justify-end items-center w-full px-2 md:px-5 py-2 md:py-4 border-b border-gray-200 shadow">
+          <button id="closeAbout" class="text-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+              <path fill-rule="evenodd"
+                d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col justify-center items-center w-full md:w-1/2 mx-auto px-2 md:px-0 py-5 md:py-10">
+          <h1 class="text-2xl text-gray-700 font-semibold">What Is A Viewport?</h1>
+          <div class="text-base text-gray-700 font-normal mt-4">
+            <p class="mb-2">In web development, the viewport refers to the user's visible area of a web page. It
+              represents the
+              portion of the web page that is currently visible to the user in their browser window or on their device
+              screen.</p>
+
+            <p class="mb-2">The size of the viewport can vary depending on the device and browser being used. For
+              example, on a
+              desktop computer, the viewport size is typically larger compared to a mobile device such as a smartphone
+              or tablet.</p>
+
+            <p class="mb-2">Developers often need to consider the viewport when designing and developing websites to
+              ensure that
+              their content is displayed correctly and optimally across different devices and screen sizes. This
+              practice is known as responsive web design.</p>
+
+            <p class="mb-2">Responsive web design involves using CSS media queries and other techniques to adapt the
+              layout and
+              appearance of a website based on the characteristics of the viewport. This allows the website to provide
+              an optimal user experience regardless of the device or screen size.</p>
+
+            <p class="mb-2">By understanding and utilizing the viewport, developers can create websites that are more
+              user-friendly
+              and accessible across a wide range of devices and platforms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="myScript.js"></script>
+</body>
+
+</html>
